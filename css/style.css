@@ -1,0 +1,135 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#slider .rs-path-color  {
+    background-color: #939393;
+}
+#slider .rs-handle  {
+    background-color: orange;
+}
+#slider .rs-tooltip-color{
+    background-color: #FFFFFF;
+}
+#slider {
+    position: fixed;
+    top: 44%;
+    left: 39.7%;
+    background-color: rgb(225, 225, 225);
+}
+
+#value{
+    height: 21px;
+    width: 55px;
+    background-color: rgb(252, 119, 119);
+    flood-color: rgb(182, 31, 31);
+    position: fixed;
+    top: 39.6%;
+    left: 44.9%;
+}
+
+#output_window{
+    /* width: 100%; */
+    height: 80vh;
+    background-color: rgb(225, 225, 225);
+    /* background-position: 100% 100%; */
+    pointer-events: none;
+}
+
+#angle_show{
+    background-color: rgb(138, 131, 131);
+    color: rgb(255, 255, 255);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.switch {
+    opacity: 1;
+}
+
+.checkbox{
+    opacity: 0;
+}
+
+#sim_status_show{
+    width: 95px;
+    height: 40px;
+}
+
+#crystal_status_show{
+    width: 158px;
+    height: 40px;
+}
+
+.switch > div {
+    
+    background: #9A9A9A;
+    z-index: 0;
+    cursor: pointer;
+    position: relative;
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: right;
+    padding: 0 10px;
+    color: rgba(0,0,0,.5);
+    transition: all 250ms;
+    box-shadow: inset 0 3px 15px -3px
+}
+
+.switch > input:checked + div {
+    background: rgb(223, 39, 58);
+    text-align: left;
+    color: rgba(255,255,255,.75);
+}
+
+.switch > div:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: -2px;
+    height: 44px;
+    width: 44px;
+    background: linear-gradient(#f9f9f9 30%,#CDCDCD);
+    border-radius: 50%;
+    transition: all 200ms;
+    box-shadow: 0 15px 15px -3px rgba(0,0,0,.25), inset 0 -2px 2px -3px,  0 3px 0 0px #f9f9f9;
+}
+
+.switch > div:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 11px;
+    top: 11px;
+    height: 22px;
+    width: 22px;
+    background: linear-gradient(#DCDCDC,#E3E3E3);
+    border-radius: 50%;
+    transition: all 200ms;
+}
+
+#crystal_label > input:checked + div:after {
+    left: 130px;
+}
+
+#crystal_label > input:checked + div:before {
+    content: '';
+    position: absolute;
+    left: 118px;
+    border-radius: 50%;
+}
+
+
+#sim_label > input:checked + div:after {
+    left: 64px;
+}
+
+#sim_label > input:checked + div:before {
+    content: '';
+    position: absolute;
+    left: 52px;
+    border-radius: 50%;
+}
