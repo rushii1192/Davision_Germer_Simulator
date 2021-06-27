@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Davisson and Germer Experiment</title>
+    <link rel="stylesheet" href="round_slider_source/actual_source/css/roundslider.min.css">  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">  
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .animation{
+            background-image: linear-gradient(rgba(255, 255, 255, 0.274),rgba(255, 255, 255, 0.274)), url("images/animation.gif");
+            height: 170px;
+            width: 190px;
+            background-size: 100% 100%;
+            top: 45%;
+            left: 40%;
+            position: fixed;
+            border-radius: 50%;
+        }
+        .crystal_image{
+            
+            height: 80px;
+            width: 80px;
+            background-size: 100% 100%;
+            top: 55%;
+            left: 44%;
+            position: fixed;
+        }
+        #nickel_crystal{
+            background-image: url("images/nickel_crystal.png");
+        }
+        #copper_crystal{
+            background-image: url("images/copper_crystal.png");
+        }
+        #alluminium_crystal{
+            background-image: url("images/aluminium_crystal.png");
+        }
+        .electron_beam{
+            background-image: url("images/image_k_1.png");
+            width: 300px;
+            height: 2px;
+            animation: rain .9s linear infinite;
+            position: fixed;
+            top: 61%;
+            left: 25%;
+        }
+        @keyframes rain {
+            from{
+                background-position: 0% 0%;
+            }
+            to{
+                background-position: 45px 100%;
+            }
+        }
+        .coilgun{
+            background-image: url("images/coil_gun.png");
+            width: 220px;
+            height: 150px;
+            position: fixed;
+            background-size: 110% 110%;
+            top: 47%;
+            left: 13%;
+        }
+        .ammeter{
+            background-image: url("images/ammeter.png");
+            background-repeat: no-repeat;
+            height: 37px;
+            width: 100px;
+            position: fixed;
+            top: 38%;
+            left: 44%;
+        }
+        #diagram{
+            position: fixed;
+            top: 40%;
+            left: 1%;
+        }
+        #video{
+            position: fixed;
+            top: 15%;
+            left: 3%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="maindiv">
+        <div class="row">
+            <div class="col-sm-12">
+                <nav class="navbar navbar-expand-lg btn-danger">
+                    <div class="container-fluid">
+                      <span class="navbar-brand mb-0 h1">Davisson & Germer Experiment</span>
+                    </div>
+                    <form class="d-flex">
+                        <img src="images/sfitlogo.jpg" alt="logo" width="50" height="50">
+                    </form>
+                  </nav>
+            </div>
+        </div>
+        <div id="row">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="theory-tab" data-bs-toggle="tab" data-bs-target="#theory" type="button" role="tab" aria-controls="theory" aria-selected="true">Theory</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="procedure-tab" data-bs-toggle="tab" data-bs-target="#procedure" type="button" role="tab" aria-controls="procedure" aria-selected="false">Procedure</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="simulator-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Simulator</button>
+                </li>
+              </ul>
+        </div>
+        <div class="row">
+            <div id="theory">
+                <video width="200" height="200" id="video" controls>
+                    <source src="images/lab_video.mp4" type="video/mp4">
+                </video> <img src="images/diagram.png" height="200" width="300" id="diagram">
+                <pre>
+                    <strong>AIM:</strong> To verify the de Broglie hypothesis by Davisson and Germer experiment.
+                    <strong>APPARATUS:</strong> An electron gun, accelerating anode, crystal, detector, galvanometer.
+                    <strong>THEORY:</strong> Clinton Davisson and Lester Germer carried out an experiment in the year 1927, popularly known as 
+                            Davisson Germer’s experiment to explain wave nature of electrons through electron diffraction.
+                            Davisson and Germer designed and built an electron gun containing a filament coated with barium oxide which is connected 
+                            to a low voltage power supply. By applying suitable potential difference from the high voltage power supply, the electron 
+                            gun emits electrons which are then made to pass through a cylinder perforated with fine holes along its axis thereby producing 
+                            a fine collimated beam of electrons.
+                                This beam of electrons is then allowed to strike the surface of the nickel crystal. Due to this the electrons scatter in 
+                            various directions. The nickel crystal can be rotated to observe the angular dependence of the scattered electrons. The beam of 
+                            electrons produced has a certain amount of intensity which is measured by the electron detector. The electron detector is mounted 
+                            on a circular scale so that it can be rotated to observe electrons at different angles.
+                                The electron detector is connected to a sensitive galvanometer to record the current. By moving the detector on the 
+                            circular scale at different positions that is changing the θ (angle between the incident electron beam and the scattered electron 
+                            beam), the intensity of scattered electron beam is measured for different values of angle scattering.
+                     
+                    <strong>OBSERVATION TABLE:</strong> 
+                                            <table class="table table-bordered">
+                                                <tr>
+                                                    <th>Sr.No</th>
+                                                    <th>Angle</th>
+                                                    <th>Current</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>1.</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2.</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3.</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </table> 
+                                            
+                     
+                    <strong>IMPORTANT OSERVATIONS OF DAVISSON AND GERMER EXPERIMENT:</strong> 
+                     •	We obtained the variation of the intensity (I) of the scattered electrons by changing the angle of scattering, θ.
+                     •	With the intensity (I) of the scattered electron for an accelerating voltage of 54V at a scattering angle θ = 50º, we could see a strong peak in the intensity.
+                     •	This peak was the result of constructive interference of the electrons scattered from different layers of the regularly spaced atoms of the crystals.
+                     •	With the help of electron diffraction, the wavelength of matter waves was calculated to be 0.167 nm.
+                     
+                    <strong>Co-relating Davisson Germer experiment and de Broglie relation:</strong> 
+                     According to de Broglie,
+                     λ = h /p
+                     λ = (1.227/√54) =0.167nm
+                     λ = wavelength associated with electrons
+                     Thus, Davisson Germer experiment confirms the wave nature of electrons and the de Broglie relation.
+                     
+                </pre>
+            </div>
+            
+            <div id="procedure">
+                <pre>
+                    <strong>Step 1:-</strong>Select the crystal.
+                    <strong>Step 2:-</strong>Click to Add Crystal Button.
+                    <strong>Step 3:-</strong>Select the voltage.
+                    <strong>Step 4:-</strong>Click on Start the animation
+                    <strong>Step 5:-</strong>Change the values of the angle and note the readings.
+                    <strong>Step 6:-</strong>Plot a graph
+                </pre>
+            </div>
+
+            <div id="simulator">
+                <div class="row">
+                <div class="col-sm-9 my-2" id="output_window">
+                    
+                    <div id="slider"></div>
+                    <div class="animation" id="animation"></div>
+                    <div class="crystal_image" id="nickel_crystal"></div>
+                    <div class="crystal_image" id="copper_crystal"></div>
+                    <div class="crystal_image" id="alluminium_crystal"></div>
+                    <div class="electron_beam"></div>       
+                    <div class="coilgun"></div>
+                    <div class="ammeter"></div>
+                    <div id="connector"></div>
+                    <input type="text" id="value" placeholder="in A" readonly>
+                </div>
+
+                <div class="col-sm-3 my-2" id="input_window">
+                    <strong>Select Crystal Name</strong> <br>
+                    <select id="crystal" class=" btn btn-danger dropdown-toggle">
+                        <option value="Nickel">Nickel</option>
+                        <option value="Copper">Copper</option>
+                        <option value="Aluminium">Aluminium</option>
+                    </select><br>
+                    <label class="switch" id="crystal_label">
+                        <input type="checkbox" class="checkbox" name="crystal_status" id="crystal_status">
+                        <div class="" id="crystal_status_show"></div>
+                    </label><br>
+                    <strong>Select Voltage Value</strong> <br>
+                    <select id="nickel_voltage" class="btn btn-danger dropdown-toggle">
+                        <option value="47">47 V</option>
+                        <option value="52">52 V</option>
+                        <option value="61">61 V</option>
+                    </select>
+                    <select id="copper_voltage" class="btn btn-danger dropdown-toggle">
+                        <option value="56">56 V</option>
+                        <option value="62">62 V</option>
+                        <option value="73">73 V</option>
+                    </select>
+                    <select id="aluminium_voltage" class="btn btn-danger dropdown-toggle">
+                        <option value="71">71 V</option>
+                        <option value="78">78 V</option>
+                        <option value="92">92 V</option>
+                    </select>
+                    <br>
+                    <label class="switch" id="sim_label">
+                        <input type="checkbox" class="checkbox" id="sim_status">
+                        <div class="" id="sim_status_show"></div>
+                    </label><br>
+                    <strong>Select Angle Value</strong> <br>
+                    <div id="angle_show"></div>
+                    <input type="range" id="angle" min="0" max="90" step="10" value="0">
+                    
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/data_handler.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <script src="round_slider_source/actual_source/js/roundslider.min.js"></script>
+    
+    <script>
+        const crystal_name = document.getElementById("crystal");
+        
+        const angle_value = document.getElementById("angle");
+        
+        crystal_name.addEventListener("change",reading_giver);
+        angle_value.addEventListener("change",reading_giver);
+
+        $(document).ready(function(){
+            $("#slider").roundSlider({
+                radius: 101,
+                width: 14,
+                value: 0,
+                handleSize: "+14",
+                circleShape: "half-top"
+            });
+            $("#nickel_voltage").show();
+            $("#copper_voltage").hide();
+            $("#aluminium_voltage").hide();
+            $(".animation").hide();
+            $(".electron_beam").hide();
+            $("#nickel_crystal").hide();
+            $("#copper_crystal").hide();
+            $("#alluminium_crystal").hide();
+            $("#sim_status_show").hide();
+            $("#simulator").hide();
+            $("#procedure").hide();
+            document.getElementById("crystal_status_show").innerHTML = "Add Crystal";
+        });
+        $("#theory-tab").click(function () {
+            $("#theory").show();
+            $("#simulator").hide();
+            $("#procedure").hide();
+        });
+
+        $("#procedure-tab").click(function () {
+            $("#theory").hide();
+            $("#simulator").hide();
+            $("#procedure").show();
+        });
+
+        $("#simulator-tab").click(function () {
+            $("#theory").hide();
+            $("#simulator").show();
+            $("#procedure").hide();
+        });
+
+        const crystal_status = document.getElementById("crystal_status");
+        const sim_status = document.getElementById("sim_status");
+        const connector = document.getElementById("connector");
+        crystal_status.addEventListener("change",toggler);
+        sim_status.addEventListener("change",toggler)
+        function toggler() {
+            if(crystal_status.checked){
+                if(crystal_name.value=="Nickel"){
+                    $("#nickel_crystal").show();
+                    $("#copper_crystal").hide();
+                    $("#alluminium_crystal").hide();    
+                }
+                if(crystal_name.value=="Copper"){
+                    $("#nickel_crystal").hide();
+                    $("#copper_crystal").show();
+                    $("#alluminium_crystal").hide();
+                }
+                if(crystal_name.value=="Aluminium"){
+                    $("#nickel_crystal").hide();
+                    $("#copper_crystal").hide();
+                    $("#alluminium_crystal").show();
+                }
+                $("#sim_status_show").show();
+                document.getElementById("crystal_status_show").innerHTML = "Remove Crystal";
+            }
+            else{
+                $("#nickel_crystal").hide();
+                $("#copper_crystal").hide();
+                $("#alluminium_crystal").hide();
+                $("#sim_status_show").hide();
+                document.getElementById("crystal_status_show").innerHTML = "Add Crystal";
+            }
+            if(sim_status.checked){
+                $(".animation").show();
+                $(".electron_beam").show();
+                document.getElementById("sim_status_show").innerHTML = "STOP";
+            }
+            else{
+                $(".animation").hide();
+                $(".electron_beam").hide();
+                document.getElementById("sim_status_show").innerHTML = "START";
+            }
+        }
+        
+        
+        function reading_giver() {
+            console.log(crystal_name.value)
+            console.log(angle_value.value);
+            var voltage = 0;
+            if(crystal_name.value == "Nickel"){
+                $("#nickel_voltage").show();
+                $("#copper_voltage").hide();
+                $("#aluminium_voltage").hide();
+                const voltage_value = document.getElementById("nickel_voltage");
+                voltage_value.addEventListener("change",reading_giver);
+                console.log(voltage_value.value);
+                voltage = voltage_value.value;
+            }
+            if(crystal_name.value == "Copper"){
+                $("#nickel_voltage").hide();
+                $("#copper_voltage").show();
+                $("#aluminium_voltage").hide();
+                const voltage_value = document.getElementById("copper_voltage");
+                voltage_value.addEventListener("change",reading_giver);
+                voltage = voltage_value.value;
+            }
+            if(crystal_name.value == "Aluminium"){
+                $("#nickel_voltage").hide();
+                $("#copper_voltage").hide();
+                $("#aluminium_voltage").show();
+                const voltage_value = document.getElementById("aluminium_voltage");
+                voltage_value.addEventListener("change",reading_giver);
+                voltage = voltage_value.value;
+            }
+            connector.style.transform = "rotate("+angle_value.value+"deg)";
+            document.getElementById("angle_show").innerHTML = angle_value.value + "º";
+            document.getElementById("value").value = reading_getter(crystal_name.value,voltage,angle_value.value) + "" + "A";
+            $("#slider").roundSlider({
+                radius: 102,
+                width: 14,
+                handleSize: "+20",
+                circleShape: "half-top",
+                endAngle: 90,
+                startAngle: 0,
+                min: 0,
+                max: 90,
+                value: angle_value.value
+            });
+        }
+    </script>
+</body>
+</html>
