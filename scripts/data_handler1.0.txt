@@ -1,0 +1,35 @@
+console.log("hello world");
+
+
+var dict = {
+    "voltage": [47,52,61],
+    "angle" : [0,10,20,30,40,50,60,70,80,90],
+    "crystal" : ["Nickel","Iron","Copper"],
+    "reading":[0,1.315,2.512,3.471,4.094,4.294,4.008,3.196,1.856,0,0,1.456,2.778,3.840,4.529,4.751,4.434,3.539,2.053,0,0,1.708,3.259,4.505,5.313,5.573,5.202,4.151,2.409,0,0,1.316,2.511,3.471,4.091,4.294,4.008,3.199,1.856,0,0,1.456,2.778,3.840,4.529,4.751,4.434,3.539,2.053,0,0,1.707,3.258,4.505,5.313,5.572,5.202,4.151,2.408,0,0,1.315,2.510,3.471,4.093,4.294,4.007,3.198,1.855,0,0,1.455,2.778,3.840,4.529,4.750,4.434,3.539,2.053,0,0,1.707,3.254,4.505,5.313,5.572,5.202,4.151,2.408,0],
+}
+
+console.log(dict)
+
+
+function reading_getter(crystal_name,voltage_value,angle_value) {
+    var count = 0; 
+    for(i=0;i<=2;i++){
+        for(j=0;j<=2;j++){
+            for(k=0;k<=9;k++){
+                if(dict["crystal"][i]==crystal_name){
+                    if(dict["voltage"][j]==voltage_value){
+                        if(dict["angle"][k]==angle_value){
+                            console.log(dict["reading"][count]);
+                            return dict["reading"][count];
+                        }
+                    }
+                }
+                count = count + 1;
+            }
+        }
+    }
+       
+}
+
+// reading_getter("Iron",42,10);
+// console.log(count)
